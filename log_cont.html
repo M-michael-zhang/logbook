@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博文</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/logbook.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            var h=$(".log_cont_body").height();
+            $(".content").height(1300+h);
+        })
+    </script>
+</head>
+<body>
+<div id="all">
+    <div class="nav">
+        <div class="logo" align="center">
+            <img src="img/logo.png" width="73px" height="73px"/>
+
+        </div>
+        <div class="menu">
+            <ul class="list list-unstyled list-inline">
+                <li><a href="index.html"> 首页</a></li>
+                <li><a href="logbook.html">日志</a></li>
+                <li><a href="member.html">成员</a></li>
+                <li><a href="blog.html">博文</a></li>
+                <li><a href="project.html">作业</a></li>
+            </ul>
+
+
+        </div>
+        <div class="search"><img src="img/search.png" width="35px" height="35px">
+            <div style="width: 80%;float: right"><input type="text" class="form-control"/></div>
+        </div>
+
+
+        <div class="user"><img src="img/user.png" width="40px" height="40px"/></div>
+        <div class="user_info" align="center">
+            <div class="user_item">
+                <div class="user_item_left"><img src="img/user_info.png" width="30px" height="30px" style="margin-top: 10px"/> </div>
+                <div class="user_item_right"><h4>消息提醒</h4></div>
+            </div>
+
+            <div class="user_item">
+                <div class="user_item_left"><img src="img/user_xinxi.png" width="30px" height="30px" style="margin-top: 10px"/> </div>
+                <div class="user_item_right"><h4>个人信息</h4></div>
+            </div>
+
+            <div class="user_item">
+                <div class="user_item_left"><img src="img/user_log.png" width="30px" height="30px" style="margin-top: 10px"/> </div>
+                <div class="user_item_right"><h4>我的日志</h4></div>
+            </div>
+
+            <div class="user_item">
+                <div class="user_item_left"><img src="img/user_homework.png" width="30px" height="30px" style="margin-top: 10px"/> </div>
+                <div class="user_item_right"><h4>我的作业</h4></div>
+            </div>
+
+            <div class="user_item">
+                <div class="user_item_left"><img src="img/user_cancell.png" width="30px" height="30px" style="margin-top: 10px"/> </div>
+                <div class="user_item_right"><h4>注销登陆</h4></div>
+            </div>
+        </div><!--usee 's end-->
+
+
+    </div><!--nav's end!-->
+
+    <div class="content" align="center" style="height: 1500px">
+        <div class="slides" align="center">
+
+            <div id="myCarousel" class="carousel slide">
+                <!-- 轮播（Carousel）指标 -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img id="img" src="img/1.jpg" width="100%"  alt="First slide">
+                    </div>
+                    <div class="item">
+                        <img src="img/2.jpg" width="100%"  alt="Second slide">
+                    </div>
+                    <div class="item">
+                        <img src="img/3.jpg" width="100%"   alt="Third slide">
+                    </div>
+                </div>
+                <!-- 轮播（Carousel）导航 -->
+                <a class="carousel-control left" href="#myCarousel"
+                   data-slide="prev" style="opacity: 0">&lsaquo;</a>
+                <a class="carousel-control right" href="#myCarousel"
+                   data-slide="next" style="opacity: 0">&rsaquo;</a>
+            </div>
+
+
+        </div><!--slide's end-->
+<div class="content_blog">
+<div class="log_cont_head">
+    <h2>标题标题标题标题</h2>
+
+</div>
+    <div class="log_cont_smallbody" align="left">
+        <br>
+        <p>时间：2017.08.10</p>
+        <p>作者：皮皮强</p>
+        <p>简介：生生世世生生世世生生世世生生世世</p>
+
+    </div>
+    <div class="log_cont_body" align="left">项目名称：空天猎
+        组名：Hello World!
+        组长：陈建宇
+        组员：刘淑霞、方铭、黄泽宇、贾男男、刘耀泽、刘成志
+        问题
+        　　0. 在吹牛之前，先回答这个问题： 如果你的团队来了一个新队员，有一台全新的机器， 你们是否有一个文档，只要设置了相应的权限，她就可以根据文档，从头开始搭建环境，并成功地把最新、最稳定版本的软件编译出来，并运行必要的单元测试？
+        　　我们有项目的文档，关于游戏框架，我们组内用统一的游戏框架（前期在项目设计初期搭建的框架），进入新成员后，会给他拷贝游戏框架，然后给他分配相应的功能模块。然后他就可以根据该项目目前的版本进行单元测试。
+        　　1、你的团队的源代码控制在哪里？用的是什么系统？如何处理文件的锁定问题？
+        　　coding.net托管，采用git的方式进行控制。项目单元由组长在本地进行合并后上传git。
+        　　2、如何看到这个文件和之前版本的差异？ 如何看到代码修改和工作项 （work item），缺陷修复 （bug fix) 的关系。
+
+        　　根据最新commit的文件和之前的进行对比。
+
+        　　3、如果某个文件在你签出之后已经被别人修改，并且签入了，那么你在签入你的修改的时候， 如何合并不同的修改（merge)? 你用了什么工具来帮助你？
+
+        　　coding上的代码规定只有组长可以进行上传，其他人只能下载。基本不会遇到有修改，即使有，按组长的版本为准，组长会进行备份</div>
+</div>
+
+
+    </div><!--content's end-->
+
+
+
+    <div class="foot" align="center">
+        <div class="foot_word">
+            <h5>Copyright© 2017-浙江师范大学 软件服务外包协会</h5>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博文</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            var h=$(".blog_cont_content_left").height();
+            $(".content").height(1000+h);
+        })
+    </script>
+<body>
+<div id="all">
+    <div class="nav">
+        <div class="logo" align="center">
+            <img src="img/logo.png" width="73px" height="73px"/>
+
+        </div>
+        <div class="menu">
+            <ul class="list list-unstyled list-inline">
+                <li><a href="index.html"> 首页</a></li>
+                <li><a href="logbook.html">日志</a></li>
+                <li><a href="member.html">成员</a></li>
+                <li><a href="blog.html">博文</a></li>
+                <li><a href="project.html">作业</a></li>
+            </ul>
+
+
+        </div>
+        <div class="search"><img src="img/search.png" width="35px" height="35px">
+            <div style="width: 80%;float: right"><input type="text" class="form-control"/></div>
+        </div>
+
+
+        <div class="user"><img src="img/user.png" width="40px" height="40px"/></div>
+        <div class="user_info" align="center">
+            <div class="user_item">
+                <div class="user_item_left"><img src="img/user_info.png" width="30px" height="30px" style="margin-top: 10px"/> </div>
+                <div class="user_item_right"><h4>消息提醒</h4></div>
+            </div>
+
+            <div class="user_item">
+                <div class="user_item_left"><img src="img/user_xinxi.png" width="30px" height="30px" style="margin-top: 10px"/> </div>
+                <div class="user_item_right"><h4>个人信息</h4></div>
+            </div>
+
+            <div class="user_item">
+                <div class="user_item_left"><img src="img/user_log.png" width="30px" height="30px" style="margin-top: 10px"/> </div>
+                <div class="user_item_right"><h4>我的日志</h4></div>
+            </div>
+
+            <div class="user_item">
+                <div class="user_item_left"><img src="img/user_homework.png" width="30px" height="30px" style="margin-top: 10px"/> </div>
+                <div class="user_item_right"><h4>我的作业</h4></div>
+            </div>
+
+            <div class="user_item">
+                <div class="user_item_left"><img src="img/user_cancell.png" width="30px" height="30px" style="margin-top: 10px"/> </div>
+                <div class="user_item_right"><h4>注销登陆</h4></div>
+            </div>
+        </div><!--usee 's end-->
+
+
+    </div><!--nav's end!-->
+
+    <div class="content" align="center" style="    background-color: #f4f4f4;">
+        <div class="slides" align="center">
+
+            <div id="myCarousel" class="carousel slide">
+                <!-- 轮播（Carousel）指标 -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img id="img" src="img/1.jpg" width="100%"  alt="First slide">
+                    </div>
+                    <div class="item">
+                        <img src="img/2.jpg" width="100%"  alt="Second slide">
+                    </div>
+                    <div class="item">
+                        <img src="img/3.jpg" width="100%"   alt="Third slide">
+                    </div>
+                </div>
+                <!-- 轮播（Carousel）导航 -->
+                <a class="carousel-control left" href="#myCarousel"
+                   data-slide="prev" style="opacity: 0">&lsaquo;</a>
+                <a class="carousel-control right" href="#myCarousel"
+                   data-slide="next" style="opacity: 0">&rsaquo;</a>
+            </div>
+
+
+        </div><!--slide's end-->
+
+<div class="blog_cont_content" align="left">
+    <div class="blog_cont_content_left">
+        <div class="blog_left_head">
+            <div class="blog_left_head_title"><h2>浅谈AngularJS</h2></div>
+            <p><span class="small"> 2017年08月10日 14:56:32</span>&nbsp; &nbsp;&nbsp;<span class="small">标签：</span> html / js</p>
+        </div>
+        <div class="blog_left_body">
+            <p>博主最近了解学习了一下angularJS，记录一下心得给大家分享一下~</p>
+
+
+
+            <h1>什么是AngularJS</h1>
+
+            <p>AngularJS是一个为动态WEB应用设计的结构框架，提供给大家一种新的开发应用方式，这种方式可以让你扩展HTML的语法，以弥补在构建动态WEB应用时静态文本的不足，从而在WEB应用程序中使用HTML声明动态内容。<!--more--></p>
+
+
+
+            <h1 >AngularJS有5个主要核心特性</h1>
+
+
+
+            <h2>1.双向数据绑定</h2>
+
+            <p>实现了把model与view完全绑定在一起，model变化，view也变化，反之亦然。</p>
+
+
+
+            <h2>2.模板</h2>
+
+            <p>在AngularJS中，模板相当于HTML文件被浏览器解析到DOM中，AngularJS遍历这些DOM，也就是说AngularJS把模板当做DOM来操作，去生成一些指令来完成对view的数据绑定。</p>
+
+
+
+            <h2>3.MVVM</h2>
+
+            <p>吸收了传统的MVC设计模式但又不是传统意义上的MVC，更接近于MVVM(Moodel-View-ViewModel)。</p>
+
+
+
+            <h2>4.依赖注入</h2>
+
+            <p>AngularJS拥有内建的依赖注入子系统，可以帮助开发人员更容易的开发，理解和测试应用。</p>
+
+
+
+            <h2>5.指令</h2>
+
+            <p>可以用来创建自定义的标签，也可以用来装饰元素或者操作DOM属性。</p>
+
+
+
+            <h1>AngularJS的特点</h1>
+
+            <p>前后端分离，后端只需提供数据接口，路由，模板渲染等都在前端完成 <br>
+                html和js分离，展示和逻辑分离 <br>
+                减少JS代码，减少DOM元素查找，事件绑定等代码 <br>
+                适合API开发</p>
+
+
+
+            <h1>AngularJS的一些简单使用方式</h1>
+
+            <p><strong>首先在页面引入angular.js文件！</strong> <br>
+                AngularJS有一套完整的、可扩展的、用来帮助web应用开发的指令集，它使得HTML可以转变成“特定领域语言(DSL)”，是用来扩展浏览器能力的技术之一，在DOM编译期间，和HTML关联着的指令会被检测到，并且被执行，这使得指令可以为DOM指定行为，或者改变它。 <br>
+                AngularJS通过称为指令的新属性来扩展的HTML，带有前缀ng-，我们也可以称之为“指令属性”，它就是绑定在DOM元素上的函数，可以调用方法、定义行为、绑定controller及$scope对象、操作DOM，等等。 <br>
+                AngularJS指令指示的是“当关联的HTML结构进入编译阶段时应该执行的操作”，它本质上只是一个当编译器编译到相关DOM时需要执行的函数，可以写在元素的名称里，属性里，css类名里，注释里。 <br>
+                当浏览器启动、开始解析HTML时，DOM元素上的指令属性就会跟其他属性一样被解析，也就是说当一个Angular.js应用启动，AngularJS编译器就会遍历DOM树来解析HTML，寻找这些指令属性函数，在一个DOM元素上找到一个或多个这样的指令属性函数，它们就会被收集起来、排序，然后按照优先级顺序被执行。 <br>
+                Angular.js应用的动态性和响应能力，都要归功于指令属性，常见的有：ng-app、ng-init、ng-model、ng-bind、ng-repeat等等。</p>
+
+
+
+            <h2>ng-app</h2>
+
+            <p>ng-app指令来标明一个AngularJS应用程序，并通过AngularJS完成自动初始化应用和标记应用根作用域，同时载入和指令内容相关的模块，并通过拥有ng-app指令的标签为根节点开始编译其中的DOM。 <br>
+                引用方法很简单，如下所示：</p>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-app</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+            <p>如上引用，一个AngularJS应用程序初始化就完成了并标记了作用域，也就是div元素就是AngularJS应用程序的”所有者”，在它里面的指令也就会被AngularJS编译器所编译、解析了。</p>
+
+            <h2 id="ng-init">ng-init</h2>
+
+            <p>ng-init指令初始化应用程序数据，也就是为AngularJS应用程序定义初始值，通常情况下，我们会使用一个控制器或模块来代替它，后面我们会介绍有关控制器和模块的知识。 <br>
+                如下所示，我们为应用程序变量name赋定初始值。</p>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">“”</span> <span class="hljs-attribute">ng-init</span>=<span class="hljs-value">“name=‘zhangsan’”</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+            <p>我们不仅可以赋值字符串，也可以赋值为数字、数组、对象，而且可以为多个变量赋初始值，如下所示：</p>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">“”</span> <span class="hljs-attribute">ng-init</span>=<span class="hljs-value">“width=3;length=5”</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+
+
+            <h2 id="ng-model">ng-model</h2>
+
+            <p>在AngularJS中，只需要使用ng-model指令就可以把应用程序数据绑定到HTML元素，实现model和view的双向绑定。 <br>
+                如下示例，使用ng-model指令对数据进行绑定。</p>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">“”</span>&gt;</span>
+请输入任意值：<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">“text”</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">“name”</span>&gt;</span>
+你输入的为： {{ name }}
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+            <p>ng-model把相关处理事件绑定到指定标签上，这样我们就可以不用在手工处理相关事件(比如change等)的条件下完成对数据的展现需求。 <br>
+                以上介绍了ng-model的单向绑定(view-&gt;model)后面控制器我们会用到它的双向绑定功能。</p>
+
+
+
+            <h3 id="ng-model原理">ng-model原理</h3>
+
+            <p>angularJS加载完成之后会启动，首先找 ng-app指令 <br>
+                找到后认为ng-app里面的所有的内容都归angularJS来管 <br>
+                找子层标签里所有的指令，然后就可以找到ng-model <br>
+                找到后会生成数据模型，然后挂在根作用域上面。 <br>
+                然后下面所有的标签都可以读取ng-model的值。</p>
+
+
+
+            <h2 id="ng-bind">ng-bind</h2>
+
+            <p>指令ng-bind和AngularJS表达式有异曲同工之妙，但不同之处就在于ng-bind是在angularJS解析渲染完毕后才将数据显示出来的。 <br>
+                如下使用ng-bind指令绑定把应用程序数据。</p>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">“”</span>&gt;</span>
+    请输入一个名字：<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">“text”</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">“name”</span>&gt;</span>
+    Hello <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-bind</span>=<span class="hljs-value">“name”</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+            <p>PS：使用花括号语法时，因为浏览器需要首先加载页面，渲染它，然后AngularJS才能把它解析成你期望看到的内容，所以对于首个页面中的数据绑定操作，建议采用ng-bind，以避免其未被渲染的模板被用户看到。</p>
+
+
+
+            <h2 id="ng-click">ng-click</h2>
+
+            <p>AngularJS也有自己的HTML事件指令，比如说通过ng-click定义一个AngularJS单击事件。 <br>
+                对按钮、链接等，我们都可以用ng-click指令属性来实现绑定，如下简单示例：</p>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">“”</span> <span class="hljs-attribute">ng-init</span>=<span class="hljs-value">“click=false”</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">“click=</span> !<span class="hljs-attribute">click</span>”&gt;</span>隐藏/显示<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-hide</span>=<span class="hljs-value">“click”</span>&gt;</span>
+        请输入一个名字：<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">“text”</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">“name”</span>&gt;</span>
+        Hello <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-bind</span>=<span class="hljs-value">“name”</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+            <p>PS：ng-hide=“true”，设置HTML元素不可见。 <br>
+                ng-click指令将DOM元素的鼠标点击事件(即mousedown)绑定到一个方法上，当浏览器在该DOM元素上鼠标触发点击事件时，AngularJS就会调用相应的方法。</p>
+
+
+
+            <h2 id="ng-repeat">ng-repeat</h2>
+
+            <p>ng-repeat指令，遍历一个数据集合中的每个数据元素，并且加载HTML模版把数据渲染出来，当我们要向HTML容器节点中添加更多类似DOM元素的时候，使用ng-repeat是再好不过了。 <br>
+                ng-repeat指令对于集合中(数组中)的每一项都会渲染一次HTML元素。 <br>
+                例1:</p>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">“”</span> <span class="hljs-attribute">ng-init</span>=<span class="hljs-value">“arr=[‘3’,’5’,’9’]”</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">“x</span> <span class="hljs-attribute">in</span> <span class="hljs-attribute">arr</span>”&gt;</span>{{x}}<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span></code></pre>
+
+            <p>例2:</p>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">“”</span> <span class="hljs-attribute">ng-init</span>=<span class="hljs-value">“obj={‘user’:’zhangsan’,’pass’:’12345’,’sex’:’man’}”</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">border</span>=<span class="hljs-value">“1”</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">“(key,value)</span> <span class="hljs-attribute">in</span> <span class="hljs-attribute">obj</span>”&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>{{key}}<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>{{value}}<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span></code></pre>
+
+
+
+            <h2 id="ng-class">ng-class</h2>
+
+            <p>ng-class是AngularJS预设的一个指令，用于动态自定义dom元素的css class name</p>
+
+
+
+            <pre class="prettyprint"><code class="language-xhtml hljs handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">“utf-8”</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">style</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">“text</span>/<span class="hljs-attribute">css</span>”&gt;</span><span class="css">
+        <span class="hljs-class">.active</span><span class="hljs-rules">{
+            <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
+        <span class="hljs-rule">}</span></span>
+        <span class="hljs-class">.inactive</span><span class="hljs-rules">{
+            <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> green</span></span>;
+        <span class="hljs-rule">}</span></span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">“angular.min.js”</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">“text</span>/<span class="hljs-attribute">javascript</span>” <span class="hljs-attribute">charset</span>=<span class="hljs-value">“utf-8”</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">“”</span> <span class="hljs-attribute">ng-init</span>=<span class="hljs-value">“isActive=false”</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">“text”</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">“name1”</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">“text”</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">“name2”</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-class</span>=<span class="hljs-value">“{true:’active’,false:’inactive’}[isActive]”</span>&gt;</span>
+        </span><span class="hljs-expression">{{<span class="hljs-variable">name</span>1 +” “+ <span class="hljs-variable">name</span>2}}</span><span class="xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span></span></code></pre>
+
+
+
+            <h2 id="ng-include">ng-include</h2>
+
+            <p>ng-include就是将多个页面的公共页面提取出来，如header.html，footer.html等，在每个页面用</p>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-include</span>=<span class="hljs-value">“’header.html’”</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+
+            <p>来引入。 <br>
+                <strong>注意:&nbsp;</strong> <br>
+                必须用web容器打开站点才能成功，用本地文件的模式访问会报错 <br>
+                ng-include的值是如果要写为文件名的话需要加单引号，否则会被当作一个变量来处理。</p>
+
+
+
+            <h2 id="自定义指令">自定义指令</h2>
+
+
+
+            <h3 id="控制器scope">控制器scope</h3>
+
+            <p>AngularJS控制器控制AngularJS应用程序的数据，是常规的JavaScript对象。 <br>
+                ng-controller指令就是用来定义应用程序控制器的，并且同时创建了一个新的作用域关联到相应的DOM元素上。 <br>
+                所谓作用域就是一个指向应用模型的对象，它是表达式的执行环境，作用域有层次结构，这个层次和相应的DOM几乎是一样的，作用域能监控表达式和传递事件并且可以从父作用域继承属性。 <br>
+                每一个AngularJS应用都有一个绝对的根作用域。但也可能有多个子作用域。 一个应用可以有多个作用域，因为有一些指令会生成新的子作用域，当新作用域被创建的时候，他们会被当成子作用域添加到父作用域下，这使得作用域会变成一个和相应DOM结构一个的树状结构。</p>
+
+
+
+            <h4 id="控制器上的属性">控制器上的属性</h4>
+
+            <p>现在我们就用ng-controller指令来创建一个简单的控制器定义，如下所示：</p>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">“”</span> <span class="hljs-attribute">ng-controller</span>=<span class="hljs-value">“MyController”</span>&gt;</span>
+请输入一个名字：<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">“text”</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">“person.name”</span>&gt;</span>
+Hello <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-bind</span>=<span class="hljs-value">“person.name”</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyController</span> <span class="hljs-params">($scope)</span> {</span>
+   $scope.person = {
+      name: “zhangsan”
+   };
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
+
+            <p>如上所述，我们通过ng-controller指令创建了一个JavaScript对象 —— MyController并带有name属性，那参数<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-3-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-44" style="width: 37.603em; display: inline-block;"><span style="display: inline-block; position: relative; width: 30.083em; height: 0px; font-size: 125%;"><span style="position: absolute; clip: rect(1.603em 1000em 2.936em -0.477em); top: -2.557em; left: 0.003em;"><span class="mrow" id="MathJax-Span-45"><span class="mi" id="MathJax-Span-46" style="font-family: STIXGeneral-Italic;">s</span><span class="mi" id="MathJax-Span-47" style="font-family: STIXGeneral-Italic;">c</span><span class="mi" id="MathJax-Span-48" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-49" style="font-family: STIXGeneral-Italic;">p</span><span class="mi" id="MathJax-Span-50" style="font-family: STIXGeneral-Italic;">e</span><span class="texatom" id="MathJax-Span-51"><span class="mrow" id="MathJax-Span-52"><span class="mo" id="MathJax-Span-53"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">是</span></span></span></span><span class="texatom" id="MathJax-Span-54"><span class="mrow" id="MathJax-Span-55"><span class="mo" id="MathJax-Span-56"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">什</span></span></span></span><span class="texatom" id="MathJax-Span-57"><span class="mrow" id="MathJax-Span-58"><span class="mo" id="MathJax-Span-59"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">么</span></span></span></span><span class="texatom" id="MathJax-Span-60"><span class="mrow" id="MathJax-Span-61"><span class="mo" id="MathJax-Span-62"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">呢</span></span></span></span><span class="texatom" id="MathJax-Span-63"><span class="mrow" id="MathJax-Span-64"><span class="mo" id="MathJax-Span-65"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">，</span></span></span></span><span class="texatom" id="MathJax-Span-66"><span class="mrow" id="MathJax-Span-67"><span class="mo" id="MathJax-Span-68"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">代</span></span></span></span><span class="texatom" id="MathJax-Span-69"><span class="mrow" id="MathJax-Span-70"><span class="mo" id="MathJax-Span-71"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">表</span></span></span></span><span class="texatom" id="MathJax-Span-72"><span class="mrow" id="MathJax-Span-73"><span class="mo" id="MathJax-Span-74"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">什</span></span></span></span><span class="texatom" id="MathJax-Span-75"><span class="mrow" id="MathJax-Span-76"><span class="mo" id="MathJax-Span-77"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">么</span></span></span></span><span class="texatom" id="MathJax-Span-78"><span class="mrow" id="MathJax-Span-79"><span class="mo" id="MathJax-Span-80"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">意</span></span></span></span><span class="texatom" id="MathJax-Span-81"><span class="mrow" id="MathJax-Span-82"><span class="mo" id="MathJax-Span-83"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">思</span></span></span></span><span class="texatom" id="MathJax-Span-84"><span class="mrow" id="MathJax-Span-85"><span class="mo" id="MathJax-Span-86"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">呢</span></span></span></span><span class="texatom" id="MathJax-Span-87"><span class="mrow" id="MathJax-Span-88"><span class="mo" id="MathJax-Span-89"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">。</span></span></span></span><span class="texatom" id="MathJax-Span-90"><span class="mrow" id="MathJax-Span-91"><span class="mo" id="MathJax-Span-92"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">现</span></span></span></span><span class="texatom" id="MathJax-Span-93"><span class="mrow" id="MathJax-Span-94"><span class="mo" id="MathJax-Span-95"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">在</span></span></span></span><span class="texatom" id="MathJax-Span-96"><span class="mrow" id="MathJax-Span-97"><span class="mo" id="MathJax-Span-98"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">我</span></span></span></span><span class="texatom" id="MathJax-Span-99"><span class="mrow" id="MathJax-Span-100"><span class="mo" id="MathJax-Span-101"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">们</span></span></span></span><span class="texatom" id="MathJax-Span-102"><span class="mrow" id="MathJax-Span-103"><span class="mo" id="MathJax-Span-104"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">就</span></span></span></span><span class="texatom" id="MathJax-Span-105"><span class="mrow" id="MathJax-Span-106"><span class="mo" id="MathJax-Span-107"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">来</span></span></span></span><span class="texatom" id="MathJax-Span-108"><span class="mrow" id="MathJax-Span-109"><span class="mo" id="MathJax-Span-110"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">解</span></span></span></span><span class="texatom" id="MathJax-Span-111"><span class="mrow" id="MathJax-Span-112"><span class="mo" id="MathJax-Span-113"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">答</span></span></span></span><span class="mi" id="MathJax-Span-114" style="font-family: STIXGeneral-Italic;">M<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span class="mi" id="MathJax-Span-115" style="font-family: STIXGeneral-Italic;">y</span><span class="mi" id="MathJax-Span-116" style="font-family: STIXGeneral-Italic;">C<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-117" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-118" style="font-family: STIXGeneral-Italic;">n</span><span class="mi" id="MathJax-Span-119" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-120" style="font-family: STIXGeneral-Italic;">r<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-121" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-122" style="font-family: STIXGeneral-Italic;">l<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-123" style="font-family: STIXGeneral-Italic;">l<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-124" style="font-family: STIXGeneral-Italic;">e</span><span class="mi" id="MathJax-Span-125" style="font-family: STIXGeneral-Italic;">r<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="texatom" id="MathJax-Span-126"><span class="mrow" id="MathJax-Span-127"><span class="mo" id="MathJax-Span-128"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">对</span></span></span></span><span class="texatom" id="MathJax-Span-129"><span class="mrow" id="MathJax-Span-130"><span class="mo" id="MathJax-Span-131"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">象</span></span></span></span><span class="texatom" id="MathJax-Span-132"><span class="mrow" id="MathJax-Span-133"><span class="mo" id="MathJax-Span-134"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">参</span></span></span></span><span class="texatom" id="MathJax-Span-135"><span class="mrow" id="MathJax-Span-136"><span class="mo" id="MathJax-Span-137"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">数</span></span></span></span><span class="mo" id="MathJax-Span-138" style="font-family: STIXGeneral-Regular;">—</span><span class="mo" id="MathJax-Span-139" style="font-family: STIXGeneral-Regular; padding-left: 0.216em;">—</span></span><span style="display: inline-block; width: 0px; height: 2.563em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.403em; vertical-align: -0.33em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-3">scope是什么呢，代表什么意思呢。
+现在我们就来解答MyController对象参数 —— </script>scope。 <br>
+                <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-4-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-140" style="width: 53.709em; display: inline-block;"><span style="display: inline-block; position: relative; width: 42.936em; height: 0px; font-size: 125%;"><span style="position: absolute; clip: rect(3.043em 1000em 5.869em -0.477em); top: -3.997em; left: 0.003em;"><span class="mrow" id="MathJax-Span-141"><span style="display: inline-block; position: relative; width: 42.936em; height: 0px;"><span style="position: absolute; clip: rect(3.043em 1000em 4.376em -0.477em); top: -3.997em; left: 0.003em;"><span class="mi" id="MathJax-Span-142" style="font-family: STIXGeneral-Italic;">s</span><span class="mi" id="MathJax-Span-143" style="font-family: STIXGeneral-Italic;">c</span><span class="mi" id="MathJax-Span-144" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-145" style="font-family: STIXGeneral-Italic;">p</span><span class="mi" id="MathJax-Span-146" style="font-family: STIXGeneral-Italic;">e</span><span class="texatom" id="MathJax-Span-147"><span class="mrow" id="MathJax-Span-148"><span class="mo" id="MathJax-Span-149"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">就</span></span></span></span><span class="texatom" id="MathJax-Span-150"><span class="mrow" id="MathJax-Span-151"><span class="mo" id="MathJax-Span-152"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">是</span></span></span></span><span class="texatom" id="MathJax-Span-153"><span class="mrow" id="MathJax-Span-154"><span class="mo" id="MathJax-Span-155"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">把</span></span></span></span><span class="texatom" id="MathJax-Span-156"><span class="mrow" id="MathJax-Span-157"><span class="mo" id="MathJax-Span-158"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">一</span></span></span></span><span class="texatom" id="MathJax-Span-159"><span class="mrow" id="MathJax-Span-160"><span class="mo" id="MathJax-Span-161"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">个</span></span></span></span><span class="mi" id="MathJax-Span-162" style="font-family: STIXGeneral-Italic;">D</span><span class="mi" id="MathJax-Span-163" style="font-family: STIXGeneral-Italic;">O</span><span class="mi" id="MathJax-Span-164" style="font-family: STIXGeneral-Italic;">M<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span class="texatom" id="MathJax-Span-165"><span class="mrow" id="MathJax-Span-166"><span class="mo" id="MathJax-Span-167"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">元</span></span></span></span><span class="texatom" id="MathJax-Span-168"><span class="mrow" id="MathJax-Span-169"><span class="mo" id="MathJax-Span-170"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">素</span></span></span></span><span class="texatom" id="MathJax-Span-171"><span class="mrow" id="MathJax-Span-172"><span class="mo" id="MathJax-Span-173"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">连</span></span></span></span><span class="texatom" id="MathJax-Span-174"><span class="mrow" id="MathJax-Span-175"><span class="mo" id="MathJax-Span-176"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">结</span></span></span></span><span class="texatom" id="MathJax-Span-177"><span class="mrow" id="MathJax-Span-178"><span class="mo" id="MathJax-Span-179"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">到</span></span></span></span><span class="texatom" id="MathJax-Span-180"><span class="mrow" id="MathJax-Span-181"><span class="mo" id="MathJax-Span-182"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">控</span></span></span></span><span class="texatom" id="MathJax-Span-183"><span class="mrow" id="MathJax-Span-184"><span class="mo" id="MathJax-Span-185"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">制</span></span></span></span><span class="texatom" id="MathJax-Span-186"><span class="mrow" id="MathJax-Span-187"><span class="mo" id="MathJax-Span-188"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">器</span></span></span></span><span class="texatom" id="MathJax-Span-189"><span class="mrow" id="MathJax-Span-190"><span class="mo" id="MathJax-Span-191"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">上</span></span></span></span><span class="texatom" id="MathJax-Span-192"><span class="mrow" id="MathJax-Span-193"><span class="mo" id="MathJax-Span-194"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">的</span></span></span></span><span class="texatom" id="MathJax-Span-195"><span class="mrow" id="MathJax-Span-196"><span class="mo" id="MathJax-Span-197"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">对</span></span></span></span><span class="texatom" id="MathJax-Span-198"><span class="mrow" id="MathJax-Span-199"><span class="mo" id="MathJax-Span-200"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">象</span></span></span></span><span class="texatom" id="MathJax-Span-201"><span class="mrow" id="MathJax-Span-202"><span class="mo" id="MathJax-Span-203"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">，</span></span></span></span><span class="texatom" id="MathJax-Span-204"><span class="mrow" id="MathJax-Span-205"><span class="mo" id="MathJax-Span-206"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">它</span></span></span></span><span class="texatom" id="MathJax-Span-207"><span class="mrow" id="MathJax-Span-208"><span class="mo" id="MathJax-Span-209"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">提</span></span></span></span><span class="texatom" id="MathJax-Span-210"><span class="mrow" id="MathJax-Span-211"><span class="mo" id="MathJax-Span-212"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">供</span></span></span></span><span class="texatom" id="MathJax-Span-213"><span class="mrow" id="MathJax-Span-214"><span class="mo" id="MathJax-Span-215"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">一</span></span></span></span><span class="texatom" id="MathJax-Span-216"><span class="mrow" id="MathJax-Span-217"><span class="mo" id="MathJax-Span-218"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">个</span></span></span></span><span class="texatom" id="MathJax-Span-219"><span class="mrow" id="MathJax-Span-220"><span class="mo" id="MathJax-Span-221"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">绑</span></span></span></span><span class="texatom" id="MathJax-Span-222"><span class="mrow" id="MathJax-Span-223"><span class="mo" id="MathJax-Span-224"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">定</span></span></span></span><span class="texatom" id="MathJax-Span-225"><span class="mrow" id="MathJax-Span-226"><span class="mo" id="MathJax-Span-227"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">到</span></span></span></span><span class="mi" id="MathJax-Span-228" style="font-family: STIXGeneral-Italic;">D</span><span class="mi" id="MathJax-Span-229" style="font-family: STIXGeneral-Italic;">O</span><span class="mi" id="MathJax-Span-230" style="font-family: STIXGeneral-Italic;">M<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span class="texatom" id="MathJax-Span-231"><span class="mrow" id="MathJax-Span-232"><span class="mo" id="MathJax-Span-233"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">元</span></span></span></span><span class="texatom" id="MathJax-Span-234"><span class="mrow" id="MathJax-Span-235"><span class="mo" id="MathJax-Span-236"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">素</span></span></span></span><span class="mo" id="MathJax-Span-237" style="font-family: STIXGeneral-Regular;">(</span><span class="texatom" id="MathJax-Span-238"><span class="mrow" id="MathJax-Span-239"><span class="mo" id="MathJax-Span-240"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">以</span></span></span></span><span class="texatom" id="MathJax-Span-241"><span class="mrow" id="MathJax-Span-242"><span class="mo" id="MathJax-Span-243"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">及</span></span></span></span><span class="texatom" id="MathJax-Span-244"><span class="mrow" id="MathJax-Span-245"><span class="mo" id="MathJax-Span-246"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">其</span></span></span></span><span class="texatom" id="MathJax-Span-247"><span class="mrow" id="MathJax-Span-248"><span class="mo" id="MathJax-Span-249"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">子</span></span></span></span><span class="texatom" id="MathJax-Span-250"><span class="mrow" id="MathJax-Span-251"><span class="mo" id="MathJax-Span-252"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">元</span></span></span></span><span class="texatom" id="MathJax-Span-253"><span class="mrow" id="MathJax-Span-254"><span class="mo" id="MathJax-Span-255"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">素</span></span></span></span><span class="mo" id="MathJax-Span-256" style="font-family: STIXGeneral-Regular;">)</span><span class="texatom" id="MathJax-Span-257"><span class="mrow" id="MathJax-Span-258"><span class="mo" id="MathJax-Span-259"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">上</span></span></span></span><span class="texatom" id="MathJax-Span-260"><span class="mrow" id="MathJax-Span-261"><span class="mo" id="MathJax-Span-262"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">的</span></span></span></span><span class="texatom" id="MathJax-Span-263"><span class="mrow" id="MathJax-Span-264"><span class="mo" id="MathJax-Span-265"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">执</span></span></span></span><span class="texatom" id="MathJax-Span-266"><span class="mrow" id="MathJax-Span-267"><span class="mo" id="MathJax-Span-268"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">行</span></span></span></span><span class="texatom" id="MathJax-Span-269"><span class="mrow" id="MathJax-Span-270"><span class="mo" id="MathJax-Span-271"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">上</span></span></span></span><span class="texatom" id="MathJax-Span-272"><span class="mrow" id="MathJax-Span-273"><span class="mo" id="MathJax-Span-274"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">下</span></span></span></span><span class="texatom" id="MathJax-Span-275"><span class="mrow" id="MathJax-Span-276"><span class="mo" id="MathJax-Span-277"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">文</span></span></span></span><span class="texatom" id="MathJax-Span-278"><span class="mrow" id="MathJax-Span-279"><span class="mo" id="MathJax-Span-280"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">。</span></span></span></span><span class="texatom" id="MathJax-Span-281"><span class="mrow" id="MathJax-Span-282"><span class="mo" id="MathJax-Span-283"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">它</span></span></span></span><span class="texatom" id="MathJax-Span-284"><span class="mrow" id="MathJax-Span-285"><span class="mo" id="MathJax-Span-286"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">也</span></span></span></span><span class="texatom" id="MathJax-Span-287"><span class="mrow" id="MathJax-Span-288"><span class="mo" id="MathJax-Span-289"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">是</span></span></span></span><span class="texatom" id="MathJax-Span-290"><span class="mrow" id="MathJax-Span-291"><span class="mo" id="MathJax-Span-292"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">一</span></span></span></span><span class="texatom" id="MathJax-Span-293"><span class="mrow" id="MathJax-Span-294"><span class="mo" id="MathJax-Span-295"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">个</span></span></span></span><span class="mi" id="MathJax-Span-296" style="font-family: STIXGeneral-Italic;">J<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span class="mi" id="MathJax-Span-297" style="font-family: STIXGeneral-Italic;">a</span><span class="mi" id="MathJax-Span-298" style="font-family: STIXGeneral-Italic;">v</span><span class="mi" id="MathJax-Span-299" style="font-family: STIXGeneral-Italic;">a</span><span class="mi" id="MathJax-Span-300" style="font-family: STIXGeneral-Italic;">S<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-301" style="font-family: STIXGeneral-Italic;">c</span><span class="mi" id="MathJax-Span-302" style="font-family: STIXGeneral-Italic;">r<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-303" style="font-family: STIXGeneral-Italic;">i</span><span class="mi" id="MathJax-Span-304" style="font-family: STIXGeneral-Italic;">p</span><span class="mi" id="MathJax-Span-305" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="texatom" id="MathJax-Span-306"><span class="mrow" id="MathJax-Span-307"><span class="mo" id="MathJax-Span-308"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">对</span></span></span></span><span class="texatom" id="MathJax-Span-309"><span class="mrow" id="MathJax-Span-310"><span class="mo" id="MathJax-Span-311"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">象</span></span></span></span><span class="texatom" id="MathJax-Span-312"><span class="mrow" id="MathJax-Span-313"><span class="mo" id="MathJax-Span-314"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">，</span></span></span></span><span class="texatom" id="MathJax-Span-315"><span class="mrow" id="MathJax-Span-316"><span class="mo" id="MathJax-Span-317"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">指</span></span></span></span><span class="texatom" id="MathJax-Span-318"><span class="mrow" id="MathJax-Span-319"><span class="mo" id="MathJax-Span-320"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">向</span></span></span></span><span class="texatom" id="MathJax-Span-321"><span class="mrow" id="MathJax-Span-322"><span class="mo" id="MathJax-Span-323"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">应</span></span></span></span><span class="texatom" id="MathJax-Span-324"><span class="mrow" id="MathJax-Span-325"><span class="mo" id="MathJax-Span-326"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">用</span></span></span></span><span class="texatom" id="MathJax-Span-327"><span class="mrow" id="MathJax-Span-328"><span class="mo" id="MathJax-Span-329"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">程</span></span></span></span><span class="texatom" id="MathJax-Span-330"><span class="mrow" id="MathJax-Span-331"><span class="mo" id="MathJax-Span-332"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">序</span></span></span></span><span class="texatom" id="MathJax-Span-333"><span class="mrow" id="MathJax-Span-334"><span class="mo" id="MathJax-Span-335"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">作</span></span></span></span><span class="texatom" id="MathJax-Span-336"><span class="mrow" id="MathJax-Span-337"><span class="mo" id="MathJax-Span-338"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">用</span></span></span></span><span class="texatom" id="MathJax-Span-339"><span class="mrow" id="MathJax-Span-340"><span class="mo" id="MathJax-Span-341"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">域</span></span></span></span><span class="texatom" id="MathJax-Span-342"><span class="mrow" id="MathJax-Span-343"><span class="mo" id="MathJax-Span-344"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">内</span></span></span></span><span class="texatom" id="MathJax-Span-345"><span class="mrow" id="MathJax-Span-346"><span class="mo" id="MathJax-Span-347"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">的</span></span></span></span><span class="texatom" id="MathJax-Span-348"><span class="mrow" id="MathJax-Span-349"><span class="mo" id="MathJax-Span-350"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">所</span></span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(3.043em 1000em 4.376em -0.477em); top: -2.504em; left: 0.003em;"><span class="texatom" id="MathJax-Span-351"><span class="mrow" id="MathJax-Span-352"><span class="mo" id="MathJax-Span-353"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">有</span></span></span></span><span class="mi" id="MathJax-Span-354" style="font-family: STIXGeneral-Italic;">H<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span class="mi" id="MathJax-Span-355" style="font-family: STIXGeneral-Italic;">T<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span class="mi" id="MathJax-Span-356" style="font-family: STIXGeneral-Italic;">M<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span class="mi" id="MathJax-Span-357" style="font-family: STIXGeneral-Italic;">L<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="texatom" id="MathJax-Span-358"><span class="mrow" id="MathJax-Span-359"><span class="mo" id="MathJax-Span-360"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">元</span></span></span></span><span class="texatom" id="MathJax-Span-361"><span class="mrow" id="MathJax-Span-362"><span class="mo" id="MathJax-Span-363"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">素</span></span></span></span><span class="texatom" id="MathJax-Span-364"><span class="mrow" id="MathJax-Span-365"><span class="mo" id="MathJax-Span-366"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">和</span></span></span></span><span class="texatom" id="MathJax-Span-367"><span class="mrow" id="MathJax-Span-368"><span class="mo" id="MathJax-Span-369"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">执</span></span></span></span><span class="texatom" id="MathJax-Span-370"><span class="mrow" id="MathJax-Span-371"><span class="mo" id="MathJax-Span-372"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">行</span></span></span></span><span class="texatom" id="MathJax-Span-373"><span class="mrow" id="MathJax-Span-374"><span class="mo" id="MathJax-Span-375"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">上</span></span></span></span><span class="texatom" id="MathJax-Span-376"><span class="mrow" id="MathJax-Span-377"><span class="mo" id="MathJax-Span-378"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">下</span></span></span></span><span class="texatom" id="MathJax-Span-379"><span class="mrow" id="MathJax-Span-380"><span class="mo" id="MathJax-Span-381"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">文</span></span></span></span><span class="texatom" id="MathJax-Span-382"><span class="mrow" id="MathJax-Span-383"><span class="mo" id="MathJax-Span-384"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">。</span></span></span></span><span class="texatom" id="MathJax-Span-385"><span class="mrow" id="MathJax-Span-386"><span class="mo" id="MathJax-Span-387"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">要</span></span></span></span><span class="texatom" id="MathJax-Span-388"><span class="mrow" id="MathJax-Span-389"><span class="mo" id="MathJax-Span-390"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">明</span></span></span></span><span class="texatom" id="MathJax-Span-391"><span class="mrow" id="MathJax-Span-392"><span class="mo" id="MathJax-Span-393"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">确</span></span></span></span><span class="texatom" id="MathJax-Span-394"><span class="mrow" id="MathJax-Span-395"><span class="mo" id="MathJax-Span-396"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">创</span></span></span></span><span class="texatom" id="MathJax-Span-397"><span class="mrow" id="MathJax-Span-398"><span class="mo" id="MathJax-Span-399"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">建</span></span></span></span><span class="texatom" id="MathJax-Span-400"><span class="mrow" id="MathJax-Span-401"><span class="mo" id="MathJax-Span-402"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">一</span></span></span></span><span class="texatom" id="MathJax-Span-403"><span class="mrow" id="MathJax-Span-404"><span class="mo" id="MathJax-Span-405"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">个</span></span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 3.27em; vertical-align: -2.197em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-4">scope就是把一个DOM元素连结到控制器上的对象，它提供一个绑定到DOM元素(以及其子元素)上的执行上下文。它也是一个JavaScript对象，指向应用程序作用域内的所有HTML元素和执行上下文。
+要明确创建一个</script>scope对象，我们就要给DOM元素安上一个controller对象，使用的是ng-controller 指令属性。 <br>
+                所有<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-5-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-406" style="width: 21.869em; display: inline-block;"><span style="display: inline-block; position: relative; width: 17.496em; height: 0px; font-size: 125%;"><span style="position: absolute; clip: rect(1.603em 1000em 2.936em -0.477em); top: -2.557em; left: 0.003em;"><span class="mrow" id="MathJax-Span-407"><span class="mi" id="MathJax-Span-408" style="font-family: STIXGeneral-Italic;">s</span><span class="mi" id="MathJax-Span-409" style="font-family: STIXGeneral-Italic;">c</span><span class="mi" id="MathJax-Span-410" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-411" style="font-family: STIXGeneral-Italic;">p</span><span class="mi" id="MathJax-Span-412" style="font-family: STIXGeneral-Italic;">e</span><span class="texatom" id="MathJax-Span-413"><span class="mrow" id="MathJax-Span-414"><span class="mo" id="MathJax-Span-415"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">都</span></span></span></span><span class="texatom" id="MathJax-Span-416"><span class="mrow" id="MathJax-Span-417"><span class="mo" id="MathJax-Span-418"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">遵</span></span></span></span><span class="texatom" id="MathJax-Span-419"><span class="mrow" id="MathJax-Span-420"><span class="mo" id="MathJax-Span-421"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">循</span></span></span></span><span class="texatom" id="MathJax-Span-422"><span class="mrow" id="MathJax-Span-423"><span class="mo" id="MathJax-Span-424"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">原</span></span></span></span><span class="texatom" id="MathJax-Span-425"><span class="mrow" id="MathJax-Span-426"><span class="mo" id="MathJax-Span-427"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">型</span></span></span></span><span class="texatom" id="MathJax-Span-428"><span class="mrow" id="MathJax-Span-429"><span class="mo" id="MathJax-Span-430"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">继</span></span></span></span><span class="texatom" id="MathJax-Span-431"><span class="mrow" id="MathJax-Span-432"><span class="mo" id="MathJax-Span-433"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">承</span></span></span></span><span class="texatom" id="MathJax-Span-434"><span class="mrow" id="MathJax-Span-435"><span class="mo" id="MathJax-Span-436"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">，</span></span></span></span><span class="texatom" id="MathJax-Span-437"><span class="mrow" id="MathJax-Span-438"><span class="mo" id="MathJax-Span-439"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">这</span></span></span></span><span class="texatom" id="MathJax-Span-440"><span class="mrow" id="MathJax-Span-441"><span class="mo" id="MathJax-Span-442"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">意</span></span></span></span><span class="texatom" id="MathJax-Span-443"><span class="mrow" id="MathJax-Span-444"><span class="mo" id="MathJax-Span-445"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">味</span></span></span></span><span class="texatom" id="MathJax-Span-446"><span class="mrow" id="MathJax-Span-447"><span class="mo" id="MathJax-Span-448"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">着</span></span></span></span><span class="texatom" id="MathJax-Span-449"><span class="mrow" id="MathJax-Span-450"><span class="mo" id="MathJax-Span-451"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">它</span></span></span></span><span class="texatom" id="MathJax-Span-452"><span class="mrow" id="MathJax-Span-453"><span class="mo" id="MathJax-Span-454"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">们</span></span></span></span><span class="texatom" id="MathJax-Span-455"><span class="mrow" id="MathJax-Span-456"><span class="mo" id="MathJax-Span-457"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">都</span></span></span></span><span class="texatom" id="MathJax-Span-458"><span class="mrow" id="MathJax-Span-459"><span class="mo" id="MathJax-Span-460"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">能</span></span></span></span><span class="texatom" id="MathJax-Span-461"><span class="mrow" id="MathJax-Span-462"><span class="mo" id="MathJax-Span-463"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">访</span></span></span></span><span class="texatom" id="MathJax-Span-464"><span class="mrow" id="MathJax-Span-465"><span class="mo" id="MathJax-Span-466"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">问</span></span></span></span><span class="texatom" id="MathJax-Span-467"><span class="mrow" id="MathJax-Span-468"><span class="mo" id="MathJax-Span-469"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">父</span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.563em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.403em; vertical-align: -0.33em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-5">scope都遵循原型继承，这意味着它们都能访问父</script>scope们,对任何属性和方法，如果AngularJS在当前<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-6-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-470" style="width: 11.896em; display: inline-block;"><span style="display: inline-block; position: relative; width: 9.496em; height: 0px; font-size: 125%;"><span style="position: absolute; clip: rect(1.603em 1000em 2.936em -0.477em); top: -2.557em; left: 0.003em;"><span class="mrow" id="MathJax-Span-471"><span class="mi" id="MathJax-Span-472" style="font-family: STIXGeneral-Italic;">s</span><span class="mi" id="MathJax-Span-473" style="font-family: STIXGeneral-Italic;">c</span><span class="mi" id="MathJax-Span-474" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-475" style="font-family: STIXGeneral-Italic;">p</span><span class="mi" id="MathJax-Span-476" style="font-family: STIXGeneral-Italic;">e</span><span class="texatom" id="MathJax-Span-477"><span class="mrow" id="MathJax-Span-478"><span class="mo" id="MathJax-Span-479"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">上</span></span></span></span><span class="texatom" id="MathJax-Span-480"><span class="mrow" id="MathJax-Span-481"><span class="mo" id="MathJax-Span-482"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">找</span></span></span></span><span class="texatom" id="MathJax-Span-483"><span class="mrow" id="MathJax-Span-484"><span class="mo" id="MathJax-Span-485"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">不</span></span></span></span><span class="texatom" id="MathJax-Span-486"><span class="mrow" id="MathJax-Span-487"><span class="mo" id="MathJax-Span-488"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">到</span></span></span></span><span class="texatom" id="MathJax-Span-489"><span class="mrow" id="MathJax-Span-490"><span class="mo" id="MathJax-Span-491"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">，</span></span></span></span><span class="texatom" id="MathJax-Span-492"><span class="mrow" id="MathJax-Span-493"><span class="mo" id="MathJax-Span-494"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">就</span></span></span></span><span class="texatom" id="MathJax-Span-495"><span class="mrow" id="MathJax-Span-496"><span class="mo" id="MathJax-Span-497"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">会</span></span></span></span><span class="texatom" id="MathJax-Span-498"><span class="mrow" id="MathJax-Span-499"><span class="mo" id="MathJax-Span-500"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">到</span></span></span></span><span class="texatom" id="MathJax-Span-501"><span class="mrow" id="MathJax-Span-502"><span class="mo" id="MathJax-Span-503"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">父</span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.563em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.403em; vertical-align: -0.33em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-6">scope上找不到，就会到父</script>scope上去找，如果在父<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-7-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-504" style="width: 20.909em; display: inline-block;"><span style="display: inline-block; position: relative; width: 16.696em; height: 0px; font-size: 125%;"><span style="position: absolute; clip: rect(1.603em 1000em 2.936em -0.477em); top: -2.557em; left: 0.003em;"><span class="mrow" id="MathJax-Span-505"><span class="mi" id="MathJax-Span-506" style="font-family: STIXGeneral-Italic;">s</span><span class="mi" id="MathJax-Span-507" style="font-family: STIXGeneral-Italic;">c</span><span class="mi" id="MathJax-Span-508" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-509" style="font-family: STIXGeneral-Italic;">p</span><span class="mi" id="MathJax-Span-510" style="font-family: STIXGeneral-Italic;">e</span><span class="texatom" id="MathJax-Span-511"><span class="mrow" id="MathJax-Span-512"><span class="mo" id="MathJax-Span-513"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">上</span></span></span></span><span class="texatom" id="MathJax-Span-514"><span class="mrow" id="MathJax-Span-515"><span class="mo" id="MathJax-Span-516"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">也</span></span></span></span><span class="texatom" id="MathJax-Span-517"><span class="mrow" id="MathJax-Span-518"><span class="mo" id="MathJax-Span-519"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">没</span></span></span></span><span class="texatom" id="MathJax-Span-520"><span class="mrow" id="MathJax-Span-521"><span class="mo" id="MathJax-Span-522"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">找</span></span></span></span><span class="texatom" id="MathJax-Span-523"><span class="mrow" id="MathJax-Span-524"><span class="mo" id="MathJax-Span-525"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">到</span></span></span></span><span class="texatom" id="MathJax-Span-526"><span class="mrow" id="MathJax-Span-527"><span class="mo" id="MathJax-Span-528"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">，</span></span></span></span><span class="texatom" id="MathJax-Span-529"><span class="mrow" id="MathJax-Span-530"><span class="mo" id="MathJax-Span-531"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">就</span></span></span></span><span class="texatom" id="MathJax-Span-532"><span class="mrow" id="MathJax-Span-533"><span class="mo" id="MathJax-Span-534"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">会</span></span></span></span><span class="texatom" id="MathJax-Span-535"><span class="mrow" id="MathJax-Span-536"><span class="mo" id="MathJax-Span-537"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">继</span></span></span></span><span class="texatom" id="MathJax-Span-538"><span class="mrow" id="MathJax-Span-539"><span class="mo" id="MathJax-Span-540"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">续</span></span></span></span><span class="texatom" id="MathJax-Span-541"><span class="mrow" id="MathJax-Span-542"><span class="mo" id="MathJax-Span-543"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">向</span></span></span></span><span class="texatom" id="MathJax-Span-544"><span class="mrow" id="MathJax-Span-545"><span class="mo" id="MathJax-Span-546"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">上</span></span></span></span><span class="texatom" id="MathJax-Span-547"><span class="mrow" id="MathJax-Span-548"><span class="mo" id="MathJax-Span-549"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">回</span></span></span></span><span class="texatom" id="MathJax-Span-550"><span class="mrow" id="MathJax-Span-551"><span class="mo" id="MathJax-Span-552"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">溯</span></span></span></span><span class="texatom" id="MathJax-Span-553"><span class="mrow" id="MathJax-Span-554"><span class="mo" id="MathJax-Span-555"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">，</span></span></span></span><span class="texatom" id="MathJax-Span-556"><span class="mrow" id="MathJax-Span-557"><span class="mo" id="MathJax-Span-558"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">一</span></span></span></span><span class="texatom" id="MathJax-Span-559"><span class="mrow" id="MathJax-Span-560"><span class="mo" id="MathJax-Span-561"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">直</span></span></span></span><span class="texatom" id="MathJax-Span-562"><span class="mrow" id="MathJax-Span-563"><span class="mo" id="MathJax-Span-564"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">到</span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.563em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.403em; vertical-align: -0.33em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-7">scope上也没找到，就会继续向上回溯，一直到</script>rootScope上，这个<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-8-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-565" style="width: 10.083em; display: inline-block;"><span style="display: inline-block; position: relative; width: 8.056em; height: 0px; font-size: 125%;"><span style="position: absolute; clip: rect(1.603em 1000em 2.936em -0.424em); top: -2.557em; left: 0.003em;"><span class="mrow" id="MathJax-Span-566"><span class="mi" id="MathJax-Span-567" style="font-family: STIXGeneral-Italic;">r<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-568" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-569" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-570" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-571" style="font-family: STIXGeneral-Italic;">S<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-572" style="font-family: STIXGeneral-Italic;">c</span><span class="mi" id="MathJax-Span-573" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-574" style="font-family: STIXGeneral-Italic;">p</span><span class="mi" id="MathJax-Span-575" style="font-family: STIXGeneral-Italic;">e</span><span class="texatom" id="MathJax-Span-576"><span class="mrow" id="MathJax-Span-577"><span class="mo" id="MathJax-Span-578"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">是</span></span></span></span><span class="texatom" id="MathJax-Span-579"><span class="mrow" id="MathJax-Span-580"><span class="mo" id="MathJax-Span-581"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">最</span></span></span></span><span class="texatom" id="MathJax-Span-582"><span class="mrow" id="MathJax-Span-583"><span class="mo" id="MathJax-Span-584"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">顶</span></span></span></span><span class="texatom" id="MathJax-Span-585"><span class="mrow" id="MathJax-Span-586"><span class="mo" id="MathJax-Span-587"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">级</span></span></span></span><span class="texatom" id="MathJax-Span-588"><span class="mrow" id="MathJax-Span-589"><span class="mo" id="MathJax-Span-590"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">的</span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.563em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.403em; vertical-align: -0.33em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-8">rootScope是最顶级的</script>scope，它对应着含有 ng-app指令属性的那个DOM元素，也就是说根作用域关联的DOM就是ng-app指令定义的地方。 <br>
+                也就是说，拥有了$scope，我们就可以操作作用域内任何我们想要获取的对象数据。</p>
+
+
+
+            <h4 id="控制器上的方法">控制器上的方法</h4>
+
+            <p>控制器不仅声明属性也可以声明方法，如下所示：</p>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">“”</span> <span class="hljs-attribute">ng-controller</span>=<span class="hljs-value">“MyController”</span>&gt;</span>
+     名称:
+     <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">“text”</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">“username”</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">“sayHello()”</span>&gt;</span>打招呼<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
+     {{greeting}}
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyController</span><span class="hljs-params">($scope)</span> {</span>
+  $scope.username = ‘zhangsan’;
+  $scope.sayHello = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+    $scope.greeting= ‘Hello ‘ + $scope.username + ‘!’;
+  };
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
+
+
+
+            <h4 id="注意事项">注意事项</h4>
+
+            <p>不要试图去复用controller,一个控制器一般只负责一小块视图 <br>
+                不要在controller中操作DOM，这不是控制器的职责，是指令的职责。 <br>
+                不要在controller里做数据格式化，ng有很好用的过滤器实现此功能。 <br>
+                不要在controller里面做数据过滤操作，ng有$filter服务 <br>
+                一般来说，controller是不会互相调用的，控制器这间的交互是通过事件进行的。</p>
+
+
+
+            <h3 id="创建指令">创建指令</h3>
+
+            <p>指令定义对象的常用属性如下： <br>
+                <strong>template : string</strong> <br>
+                使用template指定的HTML标记替换指令内容（或指令自身） <br>
+                <strong>restrict : string</strong> <br>
+                用来限定指令在HTML模板中出现的位置。 <br>
+                <strong>replace : true|false</strong> <br>
+                使用这个属性指明template的替换方式。</p>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"angular.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">ng-controller</span>=<span class="hljs-value">"testController"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">text-directive</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">text-directive</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span></code></pre>
+
+
+
+            <h1 id="angularjs的服务">AngularJS的服务</h1>
+
+            <p>AngularJS提供了一些功能的封装，但是当你试图通过全局对象angularJS去 访问这些功能时，却发现与以往遇到的库大不相同。 <br>
+                <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-9-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-591" style="width: 28.483em; display: inline-block;"><span style="display: inline-block; position: relative; width: 22.776em; height: 0px; font-size: 125%;"><span style="position: absolute; clip: rect(1.603em 1000em 2.936em -0.477em); top: -2.557em; left: 0.003em;"><span class="mrow" id="MathJax-Span-592"><span class="mi" id="MathJax-Span-593" style="font-family: STIXGeneral-Italic;">h</span><span class="mi" id="MathJax-Span-594" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-595" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-596" style="font-family: STIXGeneral-Italic;">p</span><span class="texatom" id="MathJax-Span-597"><span class="mrow" id="MathJax-Span-598"><span class="mo" id="MathJax-Span-599"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">比</span></span></span></span><span class="texatom" id="MathJax-Span-600"><span class="mrow" id="MathJax-Span-601"><span class="mo" id="MathJax-Span-602"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">如</span></span></span></span><span class="texatom" id="MathJax-Span-603"><span class="mrow" id="MathJax-Span-604"><span class="mo" id="MathJax-Span-605"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">，</span></span></span></span><span class="texatom" id="MathJax-Span-606"><span class="mrow" id="MathJax-Span-607"><span class="mo" id="MathJax-Span-608"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">在</span></span></span></span><span class="mi" id="MathJax-Span-609" style="font-family: STIXGeneral-Italic;">j<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-610" style="font-family: STIXGeneral-Italic;">Q</span><span class="mi" id="MathJax-Span-611" style="font-family: STIXGeneral-Italic;">u</span><span class="mi" id="MathJax-Span-612" style="font-family: STIXGeneral-Italic;">e</span><span class="mi" id="MathJax-Span-613" style="font-family: STIXGeneral-Italic;">r<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-614" style="font-family: STIXGeneral-Italic;">y</span><span class="texatom" id="MathJax-Span-615"><span class="mrow" id="MathJax-Span-616"><span class="mo" id="MathJax-Span-617"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">中</span></span></span></span><span class="texatom" id="MathJax-Span-618"><span class="mrow" id="MathJax-Span-619"><span class="mo" id="MathJax-Span-620"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">，</span></span></span></span><span class="texatom" id="MathJax-Span-621"><span class="mrow" id="MathJax-Span-622"><span class="mo" id="MathJax-Span-623"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">我</span></span></span></span><span class="texatom" id="MathJax-Span-624"><span class="mrow" id="MathJax-Span-625"><span class="mo" id="MathJax-Span-626"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">们</span></span></span></span><span class="texatom" id="MathJax-Span-627"><span class="mrow" id="MathJax-Span-628"><span class="mo" id="MathJax-Span-629"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">知</span></span></span></span><span class="texatom" id="MathJax-Span-630"><span class="mrow" id="MathJax-Span-631"><span class="mo" id="MathJax-Span-632"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">道</span></span></span></span><span class="texatom" id="MathJax-Span-633"><span class="mrow" id="MathJax-Span-634"><span class="mo" id="MathJax-Span-635"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">它</span></span></span></span><span class="texatom" id="MathJax-Span-636"><span class="mrow" id="MathJax-Span-637"><span class="mo" id="MathJax-Span-638"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">的</span></span></span></span><span class="mi" id="MathJax-Span-639" style="font-family: STIXGeneral-Italic;">A</span><span class="mi" id="MathJax-Span-640" style="font-family: STIXGeneral-Italic;">P</span><span class="mi" id="MathJax-Span-641" style="font-family: STIXGeneral-Italic;">I<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span class="texatom" id="MathJax-Span-642"><span class="mrow" id="MathJax-Span-643"><span class="mo" id="MathJax-Span-644"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">通</span></span></span></span><span class="texatom" id="MathJax-Span-645"><span class="mrow" id="MathJax-Span-646"><span class="mo" id="MathJax-Span-647"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">过</span></span></span></span><span class="texatom" id="MathJax-Span-648"><span class="mrow" id="MathJax-Span-649"><span class="mo" id="MathJax-Span-650"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">一</span></span></span></span><span class="texatom" id="MathJax-Span-651"><span class="mrow" id="MathJax-Span-652"><span class="mo" id="MathJax-Span-653"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">个</span></span></span></span><span class="texatom" id="MathJax-Span-654"><span class="mrow" id="MathJax-Span-655"><span class="mo" id="MathJax-Span-656"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">全</span></span></span></span><span class="texatom" id="MathJax-Span-657"><span class="mrow" id="MathJax-Span-658"><span class="mo" id="MathJax-Span-659"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">局</span></span></span></span><span class="texatom" id="MathJax-Span-660"><span class="mrow" id="MathJax-Span-661"><span class="mo" id="MathJax-Span-662"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">对</span></span></span></span><span class="texatom" id="MathJax-Span-663"><span class="mrow" id="MathJax-Span-664"><span class="mo" id="MathJax-Span-665"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">象</span></span></span></span><span class="texatom" id="MathJax-Span-666"><span class="mrow" id="MathJax-Span-667"><span class="mo" id="MathJax-Span-668"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">：</span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.563em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.403em; vertical-align: -0.33em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-9">http
+比如，在jQuery中，我们知道它的API通过一个全局对象：</script> 暴露出来，当你需要 进行ajax调用时，使用<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-10-Frame" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-669" style="width: 60.376em; display: inline-block;"><span style="display: inline-block; position: relative; width: 48.269em; height: 0px; font-size: 125%;"><span style="position: absolute; clip: rect(1.603em 1000em 2.936em -0.424em); top: -2.557em; left: 0.003em;"><span class="mrow" id="MathJax-Span-670"><span class="mo" id="MathJax-Span-671" style="font-family: STIXGeneral-Regular;">.</span><span class="mi" id="MathJax-Span-672" style="font-family: STIXGeneral-Italic; padding-left: 0.216em;">a</span><span class="mi" id="MathJax-Span-673" style="font-family: STIXGeneral-Italic;">j<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-674" style="font-family: STIXGeneral-Italic;">a</span><span class="mi" id="MathJax-Span-675" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-676" style="font-family: STIXGeneral-Regular;">(</span><span class="mo" id="MathJax-Span-677" style="font-family: STIXGeneral-Regular;">)</span><span class="texatom" id="MathJax-Span-678"><span class="mrow" id="MathJax-Span-679"><span class="mo" id="MathJax-Span-680"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">就</span></span></span></span><span class="texatom" id="MathJax-Span-681"><span class="mrow" id="MathJax-Span-682"><span class="mo" id="MathJax-Span-683"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">可</span></span></span></span><span class="texatom" id="MathJax-Span-684"><span class="mrow" id="MathJax-Span-685"><span class="mo" id="MathJax-Span-686"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">以</span></span></span></span><span class="texatom" id="MathJax-Span-687"><span class="mrow" id="MathJax-Span-688"><span class="mo" id="MathJax-Span-689"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">了</span></span></span></span><span class="texatom" id="MathJax-Span-690"><span class="mrow" id="MathJax-Span-691"><span class="mo" id="MathJax-Span-692"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">。</span></span></span></span><span class="texatom" id="MathJax-Span-693"><span class="mrow" id="MathJax-Span-694"><span class="mo" id="MathJax-Span-695"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">这</span></span></span></span><span class="texatom" id="MathJax-Span-696"><span class="mrow" id="MathJax-Span-697"><span class="mo" id="MathJax-Span-698"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">样</span></span></span></span><span class="texatom" id="MathJax-Span-699"><span class="mrow" id="MathJax-Span-700"><span class="mo" id="MathJax-Span-701"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">的</span></span></span></span><span class="mi" id="MathJax-Span-702" style="font-family: STIXGeneral-Italic;">A</span><span class="mi" id="MathJax-Span-703" style="font-family: STIXGeneral-Italic;">P</span><span class="mi" id="MathJax-Span-704" style="font-family: STIXGeneral-Italic;">I<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span class="texatom" id="MathJax-Span-705"><span class="mrow" id="MathJax-Span-706"><span class="mo" id="MathJax-Span-707"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">很</span></span></span></span><span class="texatom" id="MathJax-Span-708"><span class="mrow" id="MathJax-Span-709"><span class="mo" id="MathJax-Span-710"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">符</span></span></span></span><span class="texatom" id="MathJax-Span-711"><span class="mrow" id="MathJax-Span-712"><span class="mo" id="MathJax-Span-713"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">合</span></span></span></span><span class="texatom" id="MathJax-Span-714"><span class="mrow" id="MathJax-Span-715"><span class="mo" id="MathJax-Span-716"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">思</span></span></span></span><span class="texatom" id="MathJax-Span-717"><span class="mrow" id="MathJax-Span-718"><span class="mo" id="MathJax-Span-719"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">维</span></span></span></span><span class="texatom" id="MathJax-Span-720"><span class="mrow" id="MathJax-Span-721"><span class="mo" id="MathJax-Span-722"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">的</span></span></span></span><span class="texatom" id="MathJax-Span-723"><span class="mrow" id="MathJax-Span-724"><span class="mo" id="MathJax-Span-725"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">预</span></span></span></span><span class="texatom" id="MathJax-Span-726"><span class="mrow" id="MathJax-Span-727"><span class="mo" id="MathJax-Span-728"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">期</span></span></span></span><span class="texatom" id="MathJax-Span-729"><span class="mrow" id="MathJax-Span-730"><span class="mo" id="MathJax-Span-731"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">。</span></span></span></span><span class="mi" id="MathJax-Span-732" style="font-family: STIXGeneral-Italic;">A</span><span class="mi" id="MathJax-Span-733" style="font-family: STIXGeneral-Italic;">n</span><span class="mi" id="MathJax-Span-734" style="font-family: STIXGeneral-Italic;">g</span><span class="mi" id="MathJax-Span-735" style="font-family: STIXGeneral-Italic;">u</span><span class="mi" id="MathJax-Span-736" style="font-family: STIXGeneral-Italic;">l<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-737" style="font-family: STIXGeneral-Italic;">a</span><span class="mi" id="MathJax-Span-738" style="font-family: STIXGeneral-Italic;">r<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-739" style="font-family: STIXGeneral-Italic;">J<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span class="mi" id="MathJax-Span-740" style="font-family: STIXGeneral-Italic;">S<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="texatom" id="MathJax-Span-741"><span class="mrow" id="MathJax-Span-742"><span class="mo" id="MathJax-Span-743"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">也</span></span></span></span><span class="texatom" id="MathJax-Span-744"><span class="mrow" id="MathJax-Span-745"><span class="mo" id="MathJax-Span-746"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">暴</span></span></span></span><span class="texatom" id="MathJax-Span-747"><span class="mrow" id="MathJax-Span-748"><span class="mo" id="MathJax-Span-749"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">露</span></span></span></span><span class="texatom" id="MathJax-Span-750"><span class="mrow" id="MathJax-Span-751"><span class="mo" id="MathJax-Span-752"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">了</span></span></span></span><span class="texatom" id="MathJax-Span-753"><span class="mrow" id="MathJax-Span-754"><span class="mo" id="MathJax-Span-755"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">一</span></span></span></span><span class="texatom" id="MathJax-Span-756"><span class="mrow" id="MathJax-Span-757"><span class="mo" id="MathJax-Span-758"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">个</span></span></span></span><span class="texatom" id="MathJax-Span-759"><span class="mrow" id="MathJax-Span-760"><span class="mo" id="MathJax-Span-761"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">全</span></span></span></span><span class="texatom" id="MathJax-Span-762"><span class="mrow" id="MathJax-Span-763"><span class="mo" id="MathJax-Span-764"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">局</span></span></span></span><span class="texatom" id="MathJax-Span-765"><span class="mrow" id="MathJax-Span-766"><span class="mo" id="MathJax-Span-767"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">对</span></span></span></span><span class="texatom" id="MathJax-Span-768"><span class="mrow" id="MathJax-Span-769"><span class="mo" id="MathJax-Span-770"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">象</span></span></span></span><span class="texatom" id="MathJax-Span-771"><span class="mrow" id="MathJax-Span-772"><span class="mo" id="MathJax-Span-773"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">：</span></span></span></span><span class="mi" id="MathJax-Span-774" style="font-family: STIXGeneral-Italic;">a</span><span class="mi" id="MathJax-Span-775" style="font-family: STIXGeneral-Italic;">n</span><span class="mi" id="MathJax-Span-776" style="font-family: STIXGeneral-Italic;">g</span><span class="mi" id="MathJax-Span-777" style="font-family: STIXGeneral-Italic;">u</span><span class="mi" id="MathJax-Span-778" style="font-family: STIXGeneral-Italic;">l<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-779" style="font-family: STIXGeneral-Italic;">a</span><span class="mi" id="MathJax-Span-780" style="font-family: STIXGeneral-Italic;">r<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-781" style="font-family: STIXGeneral-Italic;">J<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span class="mi" id="MathJax-Span-782" style="font-family: STIXGeneral-Italic;">S<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="texatom" id="MathJax-Span-783"><span class="mrow" id="MathJax-Span-784"><span class="mo" id="MathJax-Span-785"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">，</span></span></span></span><span class="texatom" id="MathJax-Span-786"><span class="mrow" id="MathJax-Span-787"><span class="mo" id="MathJax-Span-788"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">也</span></span></span></span><span class="texatom" id="MathJax-Span-789"><span class="mrow" id="MathJax-Span-790"><span class="mo" id="MathJax-Span-791"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">对</span></span></span></span><span class="mi" id="MathJax-Span-792" style="font-family: STIXGeneral-Italic;">a</span><span class="mi" id="MathJax-Span-793" style="font-family: STIXGeneral-Italic;">j<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-794" style="font-family: STIXGeneral-Italic;">a</span><span class="mi" id="MathJax-Span-795" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="texatom" id="MathJax-Span-796"><span class="mrow" id="MathJax-Span-797"><span class="mo" id="MathJax-Span-798"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">调</span></span></span></span><span class="texatom" id="MathJax-Span-799"><span class="mrow" id="MathJax-Span-800"><span class="mo" id="MathJax-Span-801"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">用</span></span></span></span><span class="texatom" id="MathJax-Span-802"><span class="mrow" id="MathJax-Span-803"><span class="mo" id="MathJax-Span-804"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">进</span></span></span></span><span class="texatom" id="MathJax-Span-805"><span class="mrow" id="MathJax-Span-806"><span class="mo" id="MathJax-Span-807"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">行</span></span></span></span><span class="texatom" id="MathJax-Span-808"><span class="mrow" id="MathJax-Span-809"><span class="mo" id="MathJax-Span-810"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">封</span></span></span></span><span class="texatom" id="MathJax-Span-811"><span class="mrow" id="MathJax-Span-812"><span class="mo" id="MathJax-Span-813"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">装</span></span></span></span><span class="texatom" id="MathJax-Span-814"><span class="mrow" id="MathJax-Span-815"><span class="mo" id="MathJax-Span-816"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">提</span></span></span></span><span class="texatom" id="MathJax-Span-817"><span class="mrow" id="MathJax-Span-818"><span class="mo" id="MathJax-Span-819"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">供</span></span></span></span><span class="texatom" id="MathJax-Span-820"><span class="mrow" id="MathJax-Span-821"><span class="mo" id="MathJax-Span-822"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">了</span></span></span></span><span class="texatom" id="MathJax-Span-823"><span class="mrow" id="MathJax-Span-824"><span class="mo" id="MathJax-Span-825"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">一</span></span></span></span><span class="texatom" id="MathJax-Span-826"><span class="mrow" id="MathJax-Span-827"><span class="mo" id="MathJax-Span-828"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 80%; font-style: normal; font-weight: normal;">个</span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.563em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.403em; vertical-align: -0.33em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-10">.ajax()就可以了。这样的API很符合思维的预期。
+AngularJS也暴露了一个全局对象：angularJS，也对ajax调用进行封装提供了一个 </script>http对象，但是，但是，当你试图沿用旧经验访问angular.$http时，发现不是 那么回事！在angularJS中是以一个参数的形式传递到控制器中，如果要使用它，需要在 controller 中定义。</p>
+
+
+
+            <h2 id="http服务">$http服务</h2>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"angular.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular-sanitize.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">"myApp"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-controller</span>=<span class="hljs-value">"myCtrl"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-bind-html</span>=<span class="hljs-value">"content"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> app = angular.module(<span class="hljs-string">"myApp"</span>, [<span class="hljs-string">'ngSanitize'</span>]);
+    app.controller(<span class="hljs-string">"myCtrl"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($scope, $http)</span> {</span>
+        $http.get(<span class="hljs-string">"content.html"</span>).success(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(res)</span> {</span>
+            $scope.content = res;
+        })
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
+
+
+
+            <h2 id="定时器">定时器</h2>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs ">var app = angular.module(“myApp”,[]);
+app.controller(“myCtrl”,function ($scope,$timeout){
+
+    $timeout(function (){
+        alert(‘a’);
+    },2000);
+});</code></pre>
+
+
+
+            <pre class="prettyprint"><code class="language-html hljs ">var app = angular.module(“myApp”,[]);
+app.controller(“myCtrl”,function ($scope,$interval){
+    //循环定时器
+    $interval(function (){
+        alert(‘a’);
+    },2000);
+});
+## 模仿百度搜索功能
+```html
+<span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">"myApp"</span> <span class="hljs-attribute">ng-controller</span>=<span class="hljs-value">"myController"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"wd"</span> <span class="hljs-attribute">ng-change</span>=<span class="hljs-value">"change()"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">"item in query"</span>&gt;</span>{{item}}<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"angular.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"angular-sanitize.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> app = angular.module(<span class="hljs-string">"myApp"</span>, [<span class="hljs-string">"ngSanitize"</span>]);
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myControllerCb</span> <span class="hljs-params">($scope, $http)</span> {</span>
+            $scope.wd = <span class="hljs-string">""</span>;
+            $scope.change = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+                $http.jsonp(<span class="hljs-string">"https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="</span>+$scope.wd+<span class="hljs-string">"&amp;cb=JSON_CALLBACK"</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(res)</span> {</span>
+                    console.log(res.data);
+                    $scope.query = res.data.s;
+                });
+            }
+        }
+        app.controller(<span class="hljs-string">"myController"</span>, myControllerCb);
+
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+
+
+
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"se-preview-section-delimiter"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+            <h1 id="angularjs过滤器">AngularJS过滤器</h1>
+
+            <p>过滤器可以使用一个管道字符（|）添加到表达式和指令中。 <br>
+                currency——格式化数字为货币格式。 <br>
+                filter——从数组项中选择一个子集。 <br>
+                lowercase——格式化字符串为小写。 <br>
+                orderBy——根据某个表达式排列数组。 <br>
+                uppercase——格式化字符串为大写。 <br>
+                例1(格式化数字为货币格式):</p>
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">“myApp”</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-controller</span>=<span class="hljs-value">“myCtrl”</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>相乘<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">“text”</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">“num1”</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">“text”</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">“num2”</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">!—currency:”￥”</span> 中文—&gt;</span>
+        结果为：{{myFn() | currency}}
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> app = angular.module(“myApp”,[]);
+    app.controller(“myCtrl”,<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($scope)</span>{</span>
+        $scope.num1=<span class="hljs-number">5</span>;
+        $scope.num2=<span class="hljs-number">10</span>;
+        $scope.myFn = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span>{</span>
+            <span class="hljs-keyword">return</span> $scope.num1*$scope.num2;
+        }
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+
+
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"se-preview-section-delimiter"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+            <p>例2(字体大小转换):</p>
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">“”</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">!—{{‘HelloWorld’</span> | <span class="hljs-attribute">lowercase</span>}}—&gt;</span>
+        {{‘HelloWorld’ | uppercase}}
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+
+
+
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"se-preview-section-delimiter"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+            <p>例3(筛选):</p>
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">“”</span> <span class="hljs-attribute">ng-init</span>=<span class="hljs-value">“arr=[‘tangcaiye’,’zhangsan’,’lisi’]”</span>&gt;</span>
+    搜索：<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">“text”</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">“name”</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">“x</span> <span class="hljs-attribute">in</span> <span class="hljs-attribute">arr</span> | <span class="hljs-attribute">filter:name</span>”&gt;</span>{{x}}<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+
+
+
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"se-preview-section-delimiter"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+            <p>例4(筛选加排序):</p>
+
+            <pre class="prettyprint"><code class="language-html hljs "><span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">“myApp”</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">ng-controller</span>=<span class="hljs-value">“myCtrl”</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">“x</span> <span class="hljs-attribute">in</span> <span class="hljs-attribute">friends</span> |<span class="hljs-attribute">filter:</span>’<span class="hljs-attribute">a</span>’ | <span class="hljs-attribute">orderBy:order:true</span>”&gt;</span>{{x}}<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">“text</span>/<span class="hljs-attribute">javascript</span>”&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> app = angular.module(“myApp”,[]);
+    app.controller(“myCtrl”,<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($scope)</span>{</span>
+        $scope.friends = [{name:’John’, phone:’<span class="hljs-number">555</span>-<span class="hljs-number">1212</span>’, age:<span class="hljs-number">21</span>},
+       {name:’Mary’, phone:’<span class="hljs-number">555</span>-<span class="hljs-number">9876</span>’, age:<span class="hljs-number">19</span>},
+       {name:’Mike’, phone:’<span class="hljs-number">555</span>-<span class="hljs-number">4321</span>’, age:<span class="hljs-number">10</span>},
+       {name:’Adam’, phone:’<span class="hljs-number">555</span>-<span class="hljs-number">5678</span>’, age:<span class="hljs-number">35</span>},
+       {name:’Julie’, phone:’<span class="hljs-number">555</span>-<span class="hljs-number">8765</span>’, age:<span class="hljs-number">29</span>}];
+       $scope.order=“phone”;
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
+
+
+
+        </div>
+
+    </div>
+    <div class="blog_cont_content_right">
+        <div class="blog_right_info">
+        <div class="blog_right_info_head">
+            <img src="img/temp.png" width="80px" height="80px" style="display: inline"/>
+            <h3 style="display: inline;margin-left: 20px;">帅气比人</h3>
+        </div>
+
+            <div class="blog_right_info_body">
+              <h4 style="border-left: solid;border-width: 2px;border-color: #9a4444">&nbsp;&nbsp;&nbsp;他的最新文章</h4>
+
+            </div>
+        </div>
+        <div class="blog_right_moreinfo">
+            <h4 style="border-left: solid;border-width: 2px;border-color: #9a4444">&nbsp;&nbsp;&nbsp;相关推荐</h4>
+        </div>
+
+    </div>
+
+</div>
+
+    </div><!--content's end-->
+
+
+
+    <div class="foot" align="center">
+        <div class="foot_word">
+            <h5>Copyright© 2017-浙江师范大学 软件服务外包协会</h5>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+.content{
+    height: 1000px;
+}
+.content_main{
+    width: 65%;
+    height: 500px;
+    margin-top: 70px;
+}
+.content_main_head{
+    width: 100%;
+    height: 100px;
+    border-bottom: solid;
+    border-width: 0.5px;
+    border-color: #666666;
+}
+#content_main_menu{
+    height: 50px;
+    margin-top:50px;
+    float: left;
+    color: #666666;
+}
+.menu_active{
+    border-bottom: solid;
+    border-width: 5px;
+    border-color: #5cacab;
+}
+.menu_active_mouse{
+    border-bottom: solid;
+    border-width: 5px;
+    border-color: #5cacab;
+}
+.content_project_term{
+    width: 30%;
+    height: 230px;
+    margin-left: 2.5%;
+    margin-top: 50px;
+    float: left;
+    border: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+    overflow: hidden;
+}
+.content_project_term_text{
+    text-align: left;
+    width: 90%;
+    height: 65%;
+}
+.content_project_term .btn{
+    margin-right: 20px;
+    margin-top: 10px;
+    float: right;
+}
+.content_project_terms{
+    width: 100%;
+    height: 660px;
+    overflow: hidden;
+}
+#terms1{
+    width: 100%;
+    height: 660px;
+}
+
+#terms2{
+    width: 100%;
+    height: 660px;
+}
+.pro_cont{
+    width: 60%;
+    height: auto;
+    margin-top: 100px;
+}
+.pro_cont_head{
+    width: 100%;
+    height: 60px;
+    font-size: 30px;
+    line-height: 60px;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: #888888;
+}
+.require{
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    line-height: 60px;
+}
+.pro_cont_body{
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    border: solid;
+    border-width: 2px;
+    border-color: #888888;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    line-height: 50px;
+    padding-top: 50px;
+}
+.hand_in{
+    width: 60%;
+    height: 400px;
+    margin-top: 100px;
+    border: solid;
+    border-width: 2px;
+    border-color: #888888;
+    background-color: #c9edfa;
+}
+.hand_in_head{
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    line-height: 60px;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: #888888;
+    padding-left: 30px;
+}
+.hand_in_cont{
+    width: 100%;
+    height: 280px;
+    padding-left: 30px;
+}
+.btn{
+    background-color: #79ceed   ;
+}
+.btn:hover{
+    background-color: #14b2ed;
+    color: white;
+}
