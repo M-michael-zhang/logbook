@@ -2,19 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>项目</title>
+    <title>项目页</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/project.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/main.js"></script>
+    <style>
+        .search_cont{
+            width: 70%;
+            height: 500px;
+            margin-top: 50px;
+        }
+        .search_cont_head{
+            width: 100%;
+            height: 70px;
+            font-size: 30px;
+            line-height: 70px;
+            padding-left: 30px;
+            border-bottom: solid;
+            border-width: 2px;
+            border-color: #777777;
+
+        }
+    </style>
     <script>
         $(document).ready(function () {
-            var h=$(".pro_cont_body").height();
-            $(".content").height(1400+h);
+            var data=localStorage.search_data;
+            $("#search_data_position").prepend(data);
         })
     </script>
+
+</head>
 <body>
 <div id="all">
     <div class="nav">
@@ -69,7 +89,7 @@
 
     </div><!--nav's end!-->
 
-    <div class="content" align="center" style="height: 1700px">
+    <div class="content" align="center" style="height: 1500px">
         <div class="slides" align="center">
 
             <div id="myCarousel" class="carousel slide">
@@ -100,39 +120,14 @@
 
 
         </div><!--slide's end-->
-<div class="pro_cont" align="left">
-    <div class="pro_cont_head"><p>作业：销售管理系统</p></div>
-    <div class="require"><p>作业状态：<span style="color: #5bc0de">未提交</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开始时间: 2017.12.06 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 截止时间: 2018.01.06</p></div>
-    <div class="pro_cont_body">
-        <h3>销售记录的管理（增删改查）</h3><br>
-        （源码运行步骤，将数据库文件导入数据库中，将源码包导入eclipse，jdk版本等问题可能会报错，修复解决后，
-        修改jdbc.properties数据库信息为自己的，运行org.rancode.main包下的类文件，输入数据库中用户表里账户密码登陆之后查看）<br>
-        <h3>技术说明：</h3><br>
-        IDEA：eclipse<br>
-        1.完成GUI界面快速编程，可以百度eclipse的swing插件下载及使用<br>
-        2.数据库用的MYSQL，大家需要学习JDBC才能与数据库交互，项目中用到了JDBCUtils，一个集成的便捷工具，学会jdbc后可以进行了解。<br>
-        3.数据库文件，.sql结尾的文件，导入数据库的管理工具生成表，我使用的是navicat<br>
-        4.整个项目使用的是三层架构进行分层<br>
-        5.推荐学习网站（http://www.runoob.com/，http://www.w3school.com.cn/）<br>
-        6.Java学习视屏：链接：https://pan.baidu.com/s/1jHPsVVw 密码：tw99<br>
-        7.JDBC学习视屏：链接：https://pan.baidu.com/s/1sl2u0nN 密码：3mqe<br>
-        8.ORACLE、SQL、PLSQL数据库视屏：https://pan.baidu.com/s/1pLfDiyf（未找到MYSQL的视屏，将就一下，基本的增删改查语句都是差不多的）<br>
-        不会的地方百度，或问实验室的其他人<br>
-        推荐大方向进度：swing---》jdbc----》三层架构----》完成<br><br>
 
+        <div class="search_cont" align="left">
+            <div class="search_cont_head">
+                <p id="search_data_position">搜索结果如下</p>
 
-    </div>
-</div>
+            </div>
 
-        <div class="hand_in" >
-
-            <div class="hand_in_head" align="left">📎 &nbsp;添加附件</div>
-            <textarea class="hand_in_cont" align="left"></textarea>
-            <button class="btn" >保存修改</button>
         </div>
-
-
-
     </div><!--content's end-->
 
 
