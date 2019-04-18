@@ -1,10 +1,15 @@
+*{
+    font-family: "Microsoft YaHei UI";
+}
+
 .content_main{
     width: 70%;
     height: 940px;
-    background-color: #d2d2d2;
+    background-color: #fefefe;
     margin-top: 80px;
     padding-top: 20px;
     border-radius: 20px;
+    border: 1px solid #e3e3e3;
 }
 .member{
     width: 20%;
@@ -51,11 +56,12 @@
     float: left;
 }
 .content_info{
-    width: 55%;
+    width: 40%;
     height: 400px;
-    float: right;
+    float: left;
     color: #444444;
-    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 20px;line-height: 35px;
 
 }
 .content_info h3{
@@ -68,7 +74,4 @@
     margin-top: 30px;
     margin-left: 7%;
 
-}
-.lead{
-    font-size: 40px;
 }

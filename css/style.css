@@ -85,7 +85,7 @@
     width: 100px;
     height: 100%;
     line-height: 80px;
-    font-size: 22px;
+    font-size: 20px;
     color: white;
     text-align: center;
 }
@@ -143,6 +143,7 @@
 }
 .content_term_title{
     float: left;
+    margin-top: 40px;
 
 }
 .content_term_img{
@@ -151,7 +152,7 @@
     margin-left: 30px;
 }
 .term_main{
-    width:100%;
+    width:90%;
     height: 370px;
 }
 
@@ -161,22 +162,24 @@
     text-align: left;
 }
 .per_img{
-    width: 40%;
+    width: 35%;
     height: 100%;
     float: left;
 }
 .per_mess{
     text-align: center;
-    width:60%;
+    width:50%;
     height: 100%;
-    float: left;
+
     color: #008ad0;
     overflow: hidden;
+    font-size: 12px;
+    line-height: 50px;
 
 }
 .major{
-    width: 80%;
-    height: 40px;
+    width: 70%;
+    height: 30px;
     margin-left: auto;
     margin-right: auto;
     border-radius:15px;

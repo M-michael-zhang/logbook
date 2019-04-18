@@ -6,54 +6,30 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <style type="text/css">
-        *{
-            margin:0px;
-            padding: 0px;
-        }
-        #all{
-            width:100%;
-            height:auto;
-            background-image: url(img/bigbg);
-            background-size: cover;
-            padding-top: 150px;
-        }
 
-        #content{
-            width:400px;
-            height: 500px;
-            background-color: white;
-            padding-top: 30px;
-            border-radius:15px;
-            color: #000;
-        }
-        .form-control{
-            margin-bottom: 20px;
-            height: 50px;
-            width: 90%;
-            background-color:#eaeaec;
-        }
-        .btn{
-            margin-top: 20px;
-            background-color: #6bc5a4;
-            color: white;
-            width: 100px;
-        }
-        .btn:hover{
-            background-color:#53987f;
-            color: white;
-        }
-        a:link{
-            color: white;
-        }
-        a:visited{
-            color: white;
-        }
-    </style>
-    <script>
+
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div id="all" align="center">
+<div id="content">
+    <div class="logo">
+        <img src="img/logo.png" width="150px" height="150px"/>
+    </div>
+    <h3 style="margin-bottom: 40px;color: #243891;">日志系统</h3>
+<input type="text" class="form-control" placeholder="用户名">
+    <input type="password" class="form-control" placeholder="密码">
+    <a href="sy.html"> <button class="btn" id="sub" >登陆</button></a>
+
+</div>
+    <div style="width: 400px;margin-top: 13px;color: white"> <span style="float: left;">&nbsp;&nbsp;没有账号？<a href="signup.html"> 点击注册</a></span>
+        <span style="float: right;"><a href="forget.html">忘记密码?</a>&nbsp;&nbsp;</span></div>
+</div>
+</body>
+<script>
     $(document).ready(function () {
         var w=($(window).height());
-        w=w-130;
+        w=w-150;
         $("#all").height(w);
         $("#sub").click(function (){
             var user=$("#username").value;
@@ -80,27 +56,10 @@
     })
     $(window).resize(function() {
         var w=($(window).height());
-        w=w-130;
+        w=w-150;
         $("#all").height(w);
 
     });
 
-    </script>
-</head>
-<body>
-<div id="all" align="center">
-<div id="content">
-    <div class="logo">
-        <img src="img/logo.png" width="150px" height="150px"/>
-    </div>
-    <h3 style="margin-bottom: 40px;color: #243891;">日志系统</h3>
-<input type="text" class="form-control" placeholder="用户名">
-    <input type="password" class="form-control" placeholder="密码">
-    <a href="sy.html"> <button class="btn" id="sub" >登陆</button></a>
-
-</div>
-    <div style="width: 400px;margin-top: 13px;color: white"> <span style="float: left;">&nbsp;&nbsp;没有账号？<a href="signup.html"> 点击注册</a></span>
-        <span style="float: right;"><a href="forget.html">忘记密码?</a>&nbsp;&nbsp;</span></div>
-</div>
-</body>
+</script>
 </html>
